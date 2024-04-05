@@ -3,3 +3,9 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  ul
+    each val in messages || []
+      li
+        strong #{val.user}:
+        span #{val.text}
+        small (Added on #{val.added})

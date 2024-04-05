@@ -1,0 +1,13 @@
+extend layout
+
+block content
+  h1  New Post
+
+  form(action='/new' method='post')
+    label(for='author') Author's Name:
+    input#author(type='text' name='author' required='')
+    br
+    label(for='message') Message Text:
+    input#message(type='text' name='message' required='')
+    br
+    input(type='submit' value='Submit')
