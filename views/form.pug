@@ -4,10 +4,14 @@ block content
   h1  New Post
 
   form(action='/new' method='post')
-    label(for='author') Author's Name:
-    input#author(type='text' name='author' required='')
-    br
-    label(for='message') Message Text:
-    input#message(type='text' name='message' required='')
-    br
-    input(type='submit' value='Submit')
+    .mb-3
+      label.form-label(for='author') Author's Name:
+      input#author.form-control(type='text' name='author' required='' placeholder='Your Name')
+    .mb-3 
+    label.form-label(for='message') Message Text:
+    textarea#message.form-control(type='text' name='message' required='' placeholder='Type something' rows='3')
+    .mt-3
+      button.btn.btn-primary(type='submit') Submit
+
+
+
